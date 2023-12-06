@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: red;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav img {
+      height: 60px;
+      width: auto;
+    }
+
+    .welcome-text {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-link {
+      margin-right: 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: red;
+      color: white;
+    }
+
+    .team-logo {
+      max-height: 40px;
+      max-width: 40px;
+      margin-right: 8px;
+    }
+
+    /* Swiper styles */
+    .swiper-container {
+      width: 100%;
+      height: 200px; /* Set the height of your slider */
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="download.png" alt="Logo">
+    <div class="welcome-text">Welcome to Dream11 Tournament by the Counterfeits</div>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="#" class="nav-link">Red Cap</a>
+        <div class="dropdown-content">
+          <a href="#">Team 1 (3 Red Caps)</a>
+          <a href="#">Team 2 (1 Red Cap)</a>
+          <!-- Add more teams as needed -->
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="nav-link">LOL Cap</a>
+        <div class="dropdown-content">
+          <a href="#">Team A (2 LOL Caps)</a>
+          <a href="#">Team B (5 LOL Caps)</a>
+          <!-- Add more teams as needed -->
+        </div>
+      </li>
+      <li><a href="#" class="nav-link">Lowest Points</a></li>
+      <li><a href="#" class="nav-link">Highest Points</a></li>
+      <li><a href="#" class="nav-link">Season Long</a></li>
+    </ul>
+  </nav>
+
+  <!-- Swiper Slider -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Update 1</div>
+      <div class="swiper-slide">Update 2</div>
+      <div class="swiper-slide">Update 3</div>
+      <!-- Add more slides as needed -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Team Logo</th>
+        <th>Team Name</th>
+        <th>Owner</th>
+        <th>Points</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="team-logo1.png" alt="Team Logo 1" class="team-logo"></td>
+        <td>CSK</td>
+        <td>ABHIROOP</td>
+        <td>150</td>
+        <td>1st</td>
+      </tr>
+      <tr>
+        <td><img src="team-logo2.png" alt="Team Logo 2" class="team-logo"></td>
+        <td>SRH</td>
+        <td>SHIVRAJ</td>
+        <td>140</td>
+        <td>2nd</td>
+      </tr>
+      <tr>
+        <td><img src="team-logo3.png" alt="Team Logo 3" class="team-logo"></td>
+        <td>GT</td>
+        <td>MAUI</td>
+        <td>130</td>
+        <td>3rd</td>
+      </tr>
+      <tr>
+        <td><img src="team-logo4.png" alt="Team Logo 4" class="team-logo"></td>
+        <td></td>
+        <td>Owner 4</td>
+        <td>120</td>
+        <td>4th</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+</html>
